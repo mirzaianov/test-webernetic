@@ -1,5 +1,14 @@
 :root {
-
+  --neutral-00: #ffffff;
+  --neutral-10: #f0f4fc;
+  --neutral-70: #323232;
+  --neutral-90: #000000;
+  --primary-20: #244c98;
+  --primary-40: #d7e2f6;
+  --text-00: #ffffff;
+  --text-20: #244c98;
+  --text-30: #1f4284;
+  --text-70: #323232;
 }
 
 *,
@@ -17,18 +26,19 @@ html {
 
 body {
   min-height: 100svh;
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
-  font-weight: 400;
+  color: var(--text-00);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #5e5e5e;
-  font-size: 16px;
-  font-family: Inter, system-ui, sans-serif;
+  background-color: var(--neutral-00);
   gap: 2rem;
-  color: var(--text-00);
-  padding-inline: 10%;
 }
 
 button {
