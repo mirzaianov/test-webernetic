@@ -26,13 +26,69 @@
     <title>Webernetic Test Task</title>
   </head>
   <body>
-    <main>
-      <section class="block">
-        <!-- block -->
-      </section>
-    </main>
-    <dialog class="modal">
-      <!-- modal -->
+    <script
+      src="script.js"
+      async
+    ></script>
+    <section class="block"
+      >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, rem velit dolores illo
+      repudiandae earum vel repellat quasi? Alias culpa fuga ut at aut laboriosam illo enim nam
+      error sit.
+    </section>
+    <dialog class="dialog">
+      <div class="modal">
+        <button class="modal__close"></button>
+        <div class="modal__wrapper">
+          <p class="modal__title">Войти в систему</p>
+          <form class="modal__form">
+            <div class="modal__content">
+              <div class="modal__inputs">
+                <label for="login">
+                  <input
+                    type="text"
+                    id="login"
+                    placeholder="Email/Телефон"
+                    autofocus
+                    required
+                  />
+                </label>
+                <label for="password">
+                  <input
+                    type="password"
+                    id="password"
+                    placeholder="Пароль"
+                    required
+                  />
+                </label>
+              </div>
+              <div class="modal__checkbox">
+                <input
+                  type="checkbox"
+                  id="remember"
+                  name="remember"
+                />
+                <label for="remember"></label>
+                <span class="modal__remember">Запомнить пароль</span>
+              </div>
+              <span class="modal__restore">Восстановить</span>
+            </div>
+            <div class="modal__buttons">
+              <button
+                type="submit"
+                class="btn btn--primary"
+              >
+                Войти
+              </button>
+              <button
+                type="submit"
+                class="btn btn--secondary"
+              >
+                Зарегестрироваться
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </dialog>
   </body>
 </html>
