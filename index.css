@@ -248,6 +248,7 @@ img {
         }
 
         .modal__checkbox {
+          position: relative;
           display: flex;
           align-items: center;
           gap: 0.875rem;
@@ -255,7 +256,10 @@ img {
           color: var(--text-70);
 
           input {
-            display: none;
+            opacity: 0;
+            width: 0;
+            height: 0;
+            position: absolute;
           }
 
           label {
@@ -270,6 +274,12 @@ img {
 
           input:checked + label {
             background-color: var(--neutral-70);
+          }
+
+          input:focus + label {
+            outline: 2px solid var(--primary-20);
+            border-radius: 2px;
+            outline-offset: 2px;
           }
 
           .modal__remember {
