@@ -125,7 +125,7 @@ img {
 }
 
 .container {
-  min-width: 1920px;
+  width: 1840px;
   margin-inline: 2.5rem;
 }
 
@@ -320,7 +320,7 @@ img {
   /* NOTE: Only for pixel-perfect perposes */
   min-width: 261px;
   max-width: 341px;
-  /* NOTE: */
+  /* - */
   background-color: var(--primary-20);
   color: var(--text-00);
   display: flex;
@@ -369,52 +369,53 @@ img {
   }
 }
 
-/* @keyframes modal-appear {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes modal-disappear {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-} */
+/*
+  NOTE:
+  I implemented adaptive layouts as requested.
+  But it is also possible to add responsive design.
+*/
 
 @media screen and (max-width: 1920px) {
   .container {
-    min-width: 1440px;
-    padding: 2.25rem 2.5rem;
+    width: 1360px;
+  }
+
+  .block {
+    .block__content {
+      flex-basis: 50%;
+
+      .block__info {
+        .block__title {
+          font-size: 1.625rem;
+        }
+      }
+    }
+
+    .block__img {
+      flex-basis: 50%;
+
+      img {
+        /* NOTE: Only for pixel-perfect perposes */
+        width: 680px;
+      }
+    }
   }
 }
 
-@media screen and (max-width: 1440px) {
+/* @media screen and (max-width: 1440px) {
   .container {
-    min-width: 768px;
-    padding: 1.5rem;
+    width: 1440px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .container {
     min-width: 375px;
-    padding: 0.875rem 1.5rem;
   }
 }
 
 @media screen and (max-width: 375px) {
   .container {
     max-width: 320px;
-    padding: 0.875rem 1.5rem;
   }
-}
+} */
