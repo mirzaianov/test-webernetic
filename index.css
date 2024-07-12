@@ -1,3 +1,5 @@
+@import 'https://unpkg.com/open-props';
+
 :root {
   --neutral-00: #ffffff;
   --neutral-10: #f0f4fc;
@@ -41,6 +43,13 @@ body {
   background-color: var(--neutral-00);
 }
 
+:is(button, input, select, textarea):focus,
+:is(button, input, select, textarea):focus-visible {
+  outline: 2px solid var(--primary-20);
+  border-radius: 2px;
+  outline-offset: 2px;
+}
+
 button {
   cursor: pointer;
   border: none;
@@ -62,13 +71,36 @@ button {
 dialog {
   max-width: min(500px, 90%);
   width: 100%;
+  display: grid;
   border: none;
   align-self: center;
   justify-self: center;
+  transition: opacity 0.5s var(--ease-3);
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 
   &::backdrop {
     backdrop-filter: blur(2px);
+    transition: backdrop-filter 0.5s ease;
+  }
+
+  &:not([open]) {
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  dialog {
+    animation: var(--animation-scale-down) forwards;
+    animation-timing-function: var(--ease-squish-3);
+  }
+
+  dialog[open] {
+    animation: var(--animation-slide-in-up) forwards;
   }
 }
 
@@ -130,7 +162,7 @@ img {
         font-weight: 400;
         line-height: 1.6;
         color: var(--text-30);
-        /* text-wrap: pretty; */
+        text-wrap: pretty;
       }
     }
   }

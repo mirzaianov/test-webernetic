@@ -1,23 +1,23 @@
-// const dialog = document.querySelector('.dialog');
+const dialog = document.querySelector('.dialog');
+const closeModal = document.querySelector('.modal__close');
+const buttons = document.querySelectorAll('.modal__buttons');
 
-// const openModal = () => {
-//   dialog.showModal();
-// };
+dialog.showModal();
 
-// openModal();
+closeModal.addEventListener('click', () => {
+  dialog.close();
+});
 
-// const closeModal = document.querySelector('.modal__close');
+buttons.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
 
-// closeModal.addEventListener('click', () => {
-//   dialog.close();
-// });
+    dialog.close();
+  });
+});
 
-// const buttons = document.querySelectorAll('.modal__buttons');
-
-// buttons.forEach((button) => {
-//   button.addEventListener('click', (e) => {
-//     e.preventDefault();
-
-//     dialog.close();
-//   });
-// });
+dialog.addEventListener('click', ({ target: dialog }) => {
+  if (dialog.nodeName === 'DIALOG') {
+    dialog.close('dismiss');
+  }
+});
