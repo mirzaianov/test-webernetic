@@ -32,7 +32,7 @@ body {
   font-style: normal;
   font-size: 1.125rem;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.375;
   color: var(--text-70);
   display: grid;
   place-content: center;
@@ -46,6 +46,7 @@ button {
   transition: all 300ms ease-in-out;
   text-wrap: nowrap;
   background-color: transparent;
+  line-height: 29px;
 
   &:hover {
     opacity: 0.8;
@@ -57,6 +58,8 @@ button {
 }
 
 dialog {
+  max-width: min(500px, 90%);
+  width: 100%;
   border: none;
   align-self: center;
   justify-self: center;
@@ -83,7 +86,6 @@ input {
 }
 
 .modal {
-  min-width: 500px;
   padding: 1.5rem;
   background-color: var(--neutral-10);
   display: flex;
@@ -93,6 +95,7 @@ input {
 
   .modal__close {
     --_cross-thickness: 2px;
+    /* NOTE: Only for pixel-perfect perposes */
     --_cross-length: calc(sqrt(2 * pow(14, 2)) * 1px);
     align-self: flex-end;
     position: relative;
@@ -178,6 +181,8 @@ input {
 
           .modal__remember {
             font-weight: 400;
+            /* NOTE: Only for pixel-perfect perposes */
+            line-height: 25px;
           }
         }
 
@@ -197,17 +202,35 @@ input {
 }
 
 .btn {
+  --_border-width: 1px;
   width: 100%;
-  padding: 1.125rem 0.75rem;
+  padding-block: calc(1.125rem - var(--_border-width));
+  padding-inline: calc(0.75rem - var(--_border-width));
+  border: var(--_border-width) solid var(--primary-20);
   border-radius: 0.25rem;
 }
 
 .btn--primary {
   background-color: var(--primary-20);
   color: var(--text-00);
+  /* NOTE: Only for pixel-perfect perposes */
+  height: 65px;
 }
 
 .btn--secondary {
-  border: 1px solid var(--primary-20);
   color: var(--text-20);
+  /* NOTE: Only for pixel-perfect perposes */
+  height: 65px;
+}
+
+@media screen and (max-width: 1920px) {
+}
+
+@media screen and (max-width: 1440px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 375px) {
 }
