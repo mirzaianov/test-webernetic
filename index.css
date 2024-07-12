@@ -172,6 +172,7 @@ img {
     place-content: center;
 
     img {
+      /* NOTE: Only for pixel-perfect perposes */
       width: 910px;
     }
   }
