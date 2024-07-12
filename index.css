@@ -85,6 +85,21 @@ input {
   }
 }
 
+img {
+  display: block;
+  object-fit: cover;
+}
+
+.container {
+  max-width: 1920px;
+  padding: 2.25rem 2.5rem;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+}
+
 .modal {
   padding: 1.5rem;
   background-color: var(--neutral-10);
@@ -111,7 +126,7 @@ input {
       top: 50%;
       left: 50%;
       background-color: var(--neutral-90);
-      border-radius: 99999px;
+      border-radius: 100vw;
     }
 
     &::before {
@@ -223,14 +238,98 @@ input {
   height: 65px;
 }
 
-@media screen and (max-width: 1920px) {
+.btn--block {
+  /* NOTE: Only for pixel-perfect perposes */
+  min-width: 261px;
+  max-width: 341px;
+  /* NOTE: */
+  background-color: var(--primary-20);
+  color: var(--text-00);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  padding-left: 1.5rem;
+  border-radius: 100vw;
+  border: none;
+
+  span {
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  div {
+    display: grid;
+    place-content: center;
+    background-color: var(--neutral-00);
+    border-radius: 100vw;
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  &:hover svg {
+    animation: arrow-rotate 500ms ease-out backwards, arrow-bounce 1000ms 500ms linear infinite;
+  }
 }
 
+@keyframes arrow-rotate {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes arrow-bounce {
+  0%,
+  100% {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.25);
+  }
+}
+
+/* @keyframes modal-appear {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes modal-disappear {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+} */
+
 @media screen and (max-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 2.25rem 2.5rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 375px) {
+  .container {
+    max-width: 1920px;
+    padding: 0.875rem 1.5rem;
+  }
 }

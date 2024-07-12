@@ -1,23 +1,23 @@
-const dialog = document.querySelector('.dialog');
+// const dialog = document.querySelector('.dialog');
 
-const openModal = () => {
-  dialog.showModal();
-};
+// const openModal = () => {
+//   dialog.showModal();
+// };
 
-openModal();
+// openModal();
 
-const closeModal = document.querySelector('.modal__close');
+// const closeModal = document.querySelector('.modal__close');
 
-closeModal.addEventListener('click', () => {
-  dialog.close();
-});
+// closeModal.addEventListener('click', () => {
+//   dialog.close();
+// });
 
-const buttons = document.querySelectorAll('.modal__buttons');
+// const buttons = document.querySelectorAll('.modal__buttons');
 
-buttons.forEach((button) => {
-  button.addEventListener('click', (e) => {
-    e.preventDefault();
+// buttons.forEach((button) => {
+//   button.addEventListener('click', (e) => {
+//     e.preventDefault();
 
-    dialog.close();
-  });
-});
+//     dialog.close();
+//   });
+// });
