@@ -388,7 +388,7 @@ img {
 
 @media screen and (max-width: 1920px) {
   .container {
-    width: 1360px;
+    max-width: 1360px;
   }
 
   .block {
@@ -407,7 +407,7 @@ img {
 
       img {
         /* NOTE: Only for pixel-perfect perposes */
-        width: 680px;
+        max-width: 680px;
       }
     }
   }
@@ -415,7 +415,7 @@ img {
 
 @media screen and (max-width: 1440px) {
   .container {
-    width: 720px;
+    max-width: 720px;
     margin-inline: 1.5rem;
   }
 
@@ -448,15 +448,15 @@ img {
 
       img {
         /* NOTE: Only for pixel-perfect perposes */
-        width: 720px;
-        height: 360px;
+        max-width: 720px;
+        max-height: 360px;
       }
     }
   }
 
   .btn--block {
     /* NOTE: Only for pixel-perfect perposes */
-    width: 261px;
+    max-width: 261px;
     /* - */
     padding: 0.625rem;
     padding-left: 1.125rem;
@@ -472,13 +472,50 @@ img {
   }
 }
 
-/*
 @media screen and (max-width: 768px) {
   .container {
-    min-width: 375px;
+    max-width: 327px;
+  }
+
+  .block {
+    margin-block: 0.875rem;
+
+    .block__content {
+      padding-bottom: 1.125rem;
+      gap: 1.125rem;
+
+      .block__info {
+        gap: 0.875rem;
+
+        .block__title {
+          font-size: 1.0625rem;
+          /* NOTE: Only for pixel-perfect perposes */
+          line-height: 27px;
+        }
+
+        .block__text {
+          font-size: 0.8125rem;
+          /* NOTE: Only for pixel-perfect perposes */
+          line-height: 21px;
+        }
+      }
+    }
+
+    .block__img {
+      img {
+        /* NOTE: Only for pixel-perfect perposes */
+        width: 327px;
+        height: 220px;
+      }
+    }
+  }
+
+  .btn--block {
+    max-width: 100%;
   }
 }
 
+/*
 @media screen and (max-width: 375px) {
   .container {
     max-width: 320px;
