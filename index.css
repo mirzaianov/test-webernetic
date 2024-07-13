@@ -124,15 +124,14 @@ img {
 }
 
 .container {
-  width: 1840px;
-  margin-inline: 2.5rem;
+  width: 1920px;
+  padding: 2.25rem 2.5rem;
 }
 
 .block {
   border-radius: 0.625rem;
   overflow: hidden;
   height: 455px;
-  margin-block: 2.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -388,7 +387,7 @@ img {
 
 @media screen and (max-width: 1920px) {
   .container {
-    max-width: 1360px;
+    max-width: 1440px;
   }
 
   .block {
@@ -415,14 +414,13 @@ img {
 
 @media screen and (max-width: 1440px) {
   .container {
-    max-width: 720px;
-    margin-inline: 1.5rem;
+    max-width: 768px;
+    padding: 1.5rem;
   }
 
   .block {
     flex-direction: column;
     height: auto;
-    margin-block: 1.5rem;
 
     .block__content {
       flex-basis: auto;
@@ -474,12 +472,11 @@ img {
 
 @media screen and (max-width: 768px) {
   .container {
-    max-width: 327px;
+    max-width: 375px;
+    padding-block: 0.875rem;
   }
 
   .block {
-    margin-block: 0.875rem;
-
     .block__content {
       padding-bottom: 1.125rem;
       gap: 1.125rem;
