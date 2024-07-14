@@ -43,10 +43,9 @@ body {
   background-color: var(--neutral-00);
 }
 
-:is(button, input, select, textarea):focus,
-:is(button, input, select, textarea):focus-visible {
+:is(button, input):focus,
+:is(button, input):focus-visible {
   outline: 2px solid var(--primary-20);
-  border-radius: 2px;
   outline-offset: 2px;
 }
 
@@ -125,6 +124,7 @@ img {
 
 .container {
   width: 1920px;
+  /* NOTE: padding-block is for simplification purposes */
   padding: 2.25rem 2.5rem;
 }
 
@@ -328,7 +328,6 @@ img {
 
 .btn--block {
   /* NOTE: Only for pixel-perfect perposes */
-  min-width: 261px;
   max-width: 341px;
   /* - */
   background-color: var(--primary-20);
@@ -387,7 +386,7 @@ img {
 
 @media screen and (max-width: 1920px) {
   .container {
-    max-width: 1440px;
+    width: 1440px;
   }
 
   .block {
@@ -414,7 +413,7 @@ img {
 
 @media screen and (max-width: 1440px) {
   .container {
-    max-width: 768px;
+    width: 768px;
     padding: 1.5rem;
   }
 
@@ -472,7 +471,7 @@ img {
 
 @media screen and (max-width: 768px) {
   .container {
-    max-width: 375px;
+    width: 375px;
     padding-block: 0.875rem;
   }
 
@@ -512,9 +511,34 @@ img {
   }
 }
 
-/*
 @media screen and (max-width: 375px) {
   .container {
-    max-width: 320px;
+    width: 100%;
   }
-} */
+
+  .block {
+    .block__img {
+      img {
+        /* NOTE: Only for pixel-perfect perposes */
+        width: 100%;
+        height: 220px;
+      }
+    }
+  }
+
+  .btn--block {
+    gap: 1rem;
+
+    span {
+      flex-shrink: 1;
+      min-width: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    div {
+      flex-shrink: 0;
+    }
+  }
+}
