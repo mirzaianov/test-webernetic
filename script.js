@@ -1,6 +1,7 @@
 const dialog = document.querySelector('.dialog');
 const closeModal = document.querySelector('.modal__close');
 const buttons = document.querySelectorAll('.modal__buttons');
+const anchor = document.querySelector('.modal__restore');
 
 dialog.showModal();
 
@@ -14,6 +15,10 @@ buttons.forEach((button) => {
 
     dialog.close();
   });
+});
+
+anchor.addEventListener('click', () => {
+  dialog.close();
 });
 
 dialog.addEventListener('click', ({ target: dialog }) => {
