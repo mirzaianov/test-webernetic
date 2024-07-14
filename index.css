@@ -72,11 +72,10 @@ button {
 
 dialog {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  inset: 0;
   max-width: min(500px, 90%);
   max-height: min(575px, 90vh);
+  margin: auto;
   width: 100%;
   display: grid;
   border: none;
