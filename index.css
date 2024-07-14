@@ -340,12 +340,12 @@ img {
   border-radius: 100vw;
   border: none;
 
-  span {
+  .btn__text {
     font-size: 1.125rem;
     line-height: 1.6;
   }
 
-  div {
+  .btn__icon {
     display: grid;
     place-content: center;
     background-color: var(--neutral-00);
@@ -458,11 +458,11 @@ img {
     padding: 0.625rem;
     padding-left: 1.125rem;
 
-    span {
+    .btn__text {
       font-size: 0.9375rem;
     }
 
-    div {
+    .btn__icon {
       width: 2.25rem;
       height: 2.25rem;
     }
@@ -511,15 +511,15 @@ img {
   }
 }
 
+/* NOTE: For responsiveness from 320px */
 @media screen and (max-width: 375px) {
   .container {
-    width: 100%;
+    width: fit-content;
   }
 
   .block {
     .block__img {
       img {
-        /* NOTE: Only for pixel-perfect perposes */
         width: 100%;
         height: 220px;
       }
@@ -528,16 +528,15 @@ img {
 
   .btn--block {
     gap: 1rem;
+    width: 224px;
 
-    span {
-      flex-shrink: 1;
-      min-width: 0;
-      overflow: hidden;
-      white-space: nowrap;
+    .btn__text {
+      width-min: 0;
       text-overflow: ellipsis;
+      overflow: hidden;
     }
 
-    div {
+    .btn__icon {
       flex-shrink: 0;
     }
   }
