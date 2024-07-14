@@ -204,6 +204,7 @@ img {
       left: 50%;
       background-color: var(--neutral-90);
       border-radius: 100vw;
+      transition: transform 300ms var(--ease-3);
     }
 
     &::before {
@@ -216,6 +217,19 @@ img {
       width: var(--_cross-length);
       height: var(--_cross-thickness);
       transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      transition: transform 300ms var(--ease-3);
+    }
+
+    &:hover::before {
+      transform: translate(-50%, -50%) rotate(135deg);
+    }
+
+    &:hover::after {
+      transform: translate(-50%, -50%) rotate(45deg);
     }
   }
 
