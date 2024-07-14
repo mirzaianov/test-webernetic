@@ -1,18 +1,21 @@
 # Webernetic Test Project
 
+![MasterHead](./head.png)
+
 ## Description
 
-The layout starts with a sign-in **modal** window and later shows the **responsive component**.
+The layout starts with an animated sign-in **Modal** window and later shows the **Responsive Component**.
 
-The **modal** is a `dialog` component, hence it can be closed with `ESC`. 
-Or just click the "cross" closing button or the form buttons.
-A **sign-in** or a **sign-up** options are not implemented yet - will be added on request. The repsective buttons can also close the modal.
+**Modal** is a `dialog` component, hence it can be closed with `ESC`. Or just click the "cross" closing button, the form buttons or the anchor.</br>
+The **sign-in**, **sign-up** or **restore** options are not implemented yet - will be added on request. The repsective buttons and the anchor can also close the modal.</br>
 
-The **responsive component** changes it's outfit according to breakpoints from the requirements. Change the viewport width to see transformations.
+**Responsive Somponent** changes it's outfit according to breakpoints from the task requirements. Change the viewport width to see transformations.
 
 ## Execution
 
-1. Run `index.html` on Live Server
+1. Run `index.html` on Live Server locally.</br>
+   &ensp;or
+2. Visit **[the deployed](https://webernetic.mirzaianov.com/)** version.
 
 ## Authors
 
