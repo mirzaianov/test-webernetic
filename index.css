@@ -308,8 +308,30 @@ img {
         }
 
         .modal__restore {
+          position: relative;
           color: var(--text-20);
           font-size: 1.25rem;
+          width: max-content;
+
+          .restore__underline {
+            position: absolute;
+            bottom: -0.15rem;
+            left: 0;
+            right: 0;
+            height: 2px;
+            transform: scaleX(0);
+            border-radius: 100vw;
+            background-color: var(--primary-20);
+            transition: transform 300ms var(--ease-3);
+            transform-origin: left;
+            margin-left: -0.15rem;
+            margin-right: -0.15rem;
+            width: calc(100% + 0.3rem);
+          }
+
+          &:hover .restore__underline {
+            transform: scaleX(1);
+          }
         }
       }
 
