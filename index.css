@@ -263,6 +263,10 @@ img {
           display: flex;
           flex-direction: column;
           gap: 0.25rem;
+
+          label:hover > input {
+            opacity: 0.8;
+          }
         }
 
         .modal__checkbox {
