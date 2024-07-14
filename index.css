@@ -284,30 +284,40 @@ img {
             position: absolute;
           }
 
-          label {
-            display: inline-block;
-            width: 1.125rem;
-            height: 1.125rem;
-            background-color: transparent;
-            border: 2px solid var(--neutral-70);
-            border-radius: 3px;
+          .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
             cursor: pointer;
+
+            &:hover {
+              opacity: 0.8;
+            }
+
+            .checkbox-label__icon {
+              display: block;
+              width: 1.125rem;
+              height: 1.125rem;
+              background-color: transparent;
+              border: 2px solid var(--neutral-70);
+              border-radius: 3px;
+            }
+
+            .checkbox-label__remember {
+              font-weight: 400;
+              /* NOTE: Only for pixel-perfect perposes */
+              line-height: 25px;
+            }
           }
 
-          input:checked + label {
+          input:checked + label > .checkbox-label__icon {
             background-color: var(--neutral-70);
           }
 
-          input:focus + label {
+          input:focus + label > .checkbox-label__icon {
             outline: 2px solid var(--primary-20);
             border-radius: 2px;
             outline-offset: 2px;
-          }
-
-          .modal__remember {
-            font-weight: 400;
-            /* NOTE: Only for pixel-perfect perposes */
-            line-height: 25px;
           }
         }
 
