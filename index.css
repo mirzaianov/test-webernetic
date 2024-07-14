@@ -29,7 +29,6 @@ html {
 }
 
 body {
-  position: relative;
   min-height: 100svh;
   font-family: 'Manrope', system-ui, sans-serif;
   font-optical-sizing: auto;
@@ -72,16 +71,20 @@ button {
 }
 
 dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   max-width: min(500px, 90%);
+  max-height: min(575px, 90vh);
   width: 100%;
   display: grid;
   border: none;
-  align-self: center;
-  justify-self: center;
   transition: opacity 0.5s var(--ease-3);
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 
   &::backdrop {
+    -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     transition: backdrop-filter 0.5s ease;
   }
